@@ -1,0 +1,19 @@
+[gd_scene load_steps=4 format=2]
+
+[ext_resource path="res://Ninja.png" type="Texture" id=1]
+[ext_resource path="res://Enemy.gd" type="Script" id=3]
+
+[sub_resource type="RectangleShape2D" id=1]
+extents = Vector2( 3.55648, 5.61072 )
+
+[node name="Enemy" type="KinematicBody2D"]
+position = Vector2( -0.334085, -8.12945 )
+script = ExtResource( 3 )
+
+[node name="Sprite" type="Sprite" parent="."]
+texture = ExtResource( 1 )
+hframes = 4
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="."]
+position = Vector2( 0.463514, 2.55119 )
+shape = SubResource( 1 )
